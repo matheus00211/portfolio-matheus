@@ -1,0 +1,865 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #8b0000 50%, #ff3333 100%);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+:root {
+    --black: #1a1a1a;
+    --red-dark: #8b0000;
+    --red-mid: #cc0000;
+    --red-light: #ff3333;
+    --white: #f5f5f5;
+    --glow: rgba(255, 51, 51, 0.5);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, rgba(26, 26, 26, 0.9), rgba(139, 0, 0, 0.8));
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    transition: all 0.5s ease;
+}
+
+.header.scrolled {
+    background: linear-gradient(45deg, var(--red-dark), var(--black));
+    box-shadow: 0 5px 20px var(--glow);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--red-light);
+    text-shadow: 0 0 10px var(--glow);
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--red-light);
+    transform: translateY(-3px);
+    text-shadow: 0 0 15px var(--glow);
+}
+
+.nav-menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--red-light);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.nav-menu a:hover::before {
+    width: 100%;
+}
+
+/* Social Media */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.social-link {
+    color: var(--white);
+    font-size: 1.8rem;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.3) rotate(360deg);
+    text-shadow: 0 0 20px var(--glow);
+}
+
+.social-link[data-social="whatsapp"]:hover { color: #25D366; }
+.social-link[data-social="linkedin"]:hover { color: #0A66C2; }
+.social-link[data-social="github"]:hover { color: #181717; }
+.social-link[data-social="instagram"]:hover { color: #E1306C; }
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: var(--glow);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+
+.social-link:hover::after {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-media {
+        gap: 1rem;
+    }
+
+    .social-link {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-link {
+        font-size: 1.2rem;
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger svg {
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger .line {
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 2;
+    transition: all 0.3s ease;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-box {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Hero (Início) */
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0a0a0a 0%, #4a0000 50%, #8b0000 100%);
+}
+
+.destaque-inicio {
+    font-size: 2.5rem;
+    color: #fff;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #ff4040; /* Cursor só aparece via JS */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Espaçamento entre os ícones */
+    margin: 1rem 0;
+}
+
+.social-link {
+    color: #fff; /* Cor dos ícones */
+    font-size: 1.8rem; /* Tamanho dos ícones */
+    transition: all 0.4s ease;
+}
+
+.social-link i {
+    display: inline-block; /* Garante que os ícones sejam visíveis */
+}
+
+.social-link[data-social="whatsapp"]:hover { color: #25D366; }
+.social-link[data-social="linkedin"]:hover { color: #0A66C2; }
+.social-link[data-social="github"]:hover { color: #181717; }
+.social-link[data-social="instagram"]:hover { color: #E1306C; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .destaque-inicio { font-size: 1.8rem; }
+    .social-link { font-size: 1.5rem; }
+}
+.container-inicio {
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.conteudo-inicio {
+    text-align: center;
+}
+
+.titulo-inicio h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.highlight {
+    color: var(--red-light);
+    text-shadow: 0 0 15px var(--glow);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px var(--glow); }
+    100% { text-shadow: 0 0 20px var(--glow), 0 0 30px var(--red-light); }
+}
+
+.destaque-inicio {
+    font-size: 2.5rem;
+    color: var(--white);
+    position: relative;
+}
+
+.typing::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.paragrafo-inicio {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    animation: text-pop 1s ease-out forwards;
+}
+
+@keyframes text-pop {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--red-mid), var(--red-light));
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--glow);
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.7s ease;
+}
+
+.cta:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.whatsapp-red {
+    background: #25D366;
+}
+
+.whatsapp-red:hover {
+    background: #20b354;
+}
+
+/* Sobre */
+.sobre {
+    padding: 80px 5%;
+    background: linear-gradient(to bottom, var(--red-dark), var(--black));
+}
+
+.container-sobre {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headline-sobre {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--glow);
+    animation: title-glow 2s infinite alternate;
+}
+
+@keyframes title-glow {
+    0% { text-shadow: 0 0 10px var(--glow); }
+    100% { text-shadow: 0 0 20px var(--glow), 0 0 30px var(--red-light); }
+}
+
+.red-line {
+    width: 100px;
+    height: 4px;
+    background: var(--red-light);
+    margin: 0 auto 3rem;
+    box-shadow: 0 0 10px var(--glow);
+    animation: line-pulse 1.5s infinite;
+}
+
+@keyframes line-pulse {
+    0% { transform: scaleX(1); }
+    50% { transform: scaleX(1.1); }
+    100% { transform: scaleX(1); }
+}
+
+.conteudo-sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.left-sobre h3 {
+    font-size: 2rem;
+    color: var(--red-light);
+    margin-bottom: 1rem;
+}
+
+.imagem-sobre img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px var(--glow);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.imagem-sobre img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 0 60px var(--glow);
+}
+
+/* Skills */
+.skills {
+    padding: 80px 5%;
+    background: linear-gradient(to top, var(--black), var(--red-dark));
+}
+
+.container-skills {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(139, 0, 0, 0.7));
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 51, 51, 0.2), transparent);
+    transform: rotate(30deg);
+    transition: all 0.6s ease;
+}
+
+.skill-card:hover::before {
+    transform: rotate(30deg) translate(-20%, -20%);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px var(--glow);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: var(--red-light);
+    margin-bottom: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.skill-card:hover i {
+    transform: scale(1.2) rotate(15deg);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--red-light);
+    border-radius: 3px;
+    animation: progress 1.5s ease-out forwards;
+}
+
+@keyframes progress {
+    from { width: 0; }
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 80px 5%;
+    background: linear-gradient(to bottom, var(--red-dark), var(--black));
+}
+
+.container-portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.red-line {
+    width: 100px;
+    height: 4px;
+    background: var(--red-mid);
+    margin: 0 auto 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px var(--glow);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(255, 51, 51, 0.7));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-overlay p {
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-link {
+    padding: 0.75rem 1.5rem;
+    background: var(--white);
+    color: var(--red-mid);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-link:hover {
+    background: var(--red-light);
+    color: var(--white);
+    box-shadow: 0 0 15px var(--glow);
+}
+
+.portfolio-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+
+.portfolio-link:hover::before {
+    width: 200px;
+    height: 200px;
+}
+/* Contato */
+.contato {
+    padding: 80px 5%;
+    background: linear-gradient(to top, var(--black), var(--red-dark));
+}
+
+.contacts {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.icon {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(139, 0, 0, 0.7));
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 0 30px var(--glow);
+}
+
+.icon .box {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, var(--red-mid), var(--red-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.8rem;
+    transition: all 0.4s ease;
+}
+
+.icon:hover .box {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--glow);
+}
+
+.icon i {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.icon a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.icon p:first-of-type {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.icon p:last-of-type {
+    font-size: 0.8rem;
+    color: var(--red-light);
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 5%;
+    background: linear-gradient(to top, var(--black), var(--red-dark));
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 0.8rem 3%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--black);
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .nav-menu .social-media {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .social-link {
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .inicio {
+        padding: 0 3%;
+    }
+
+    .titulo-inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    .destaque-inicio {
+        font-size: 1.8rem;
+    }
+
+    .paragrafo-inicio {
+        font-size: 1rem;
+    }
+
+    .cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .conteudo-sobre {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .imagem-sobre img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-card i {
+        font-size: 2.5rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .portfolio-overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .portfolio-overlay p {
+        font-size: 0.8rem;
+    }
+
+    .icons {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon {
+        width: 100%;
+        max-width: 250px;
+        padding: 1rem;
+    }
+
+    .icon .box {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon i {
+        font-size: 1.5rem;
+    }
+
+    .icon p:first-of-type {
+        font-size: 0.9rem;
+    }
+
+    .icon p:last-of-type {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .hamburger svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .titulo-inicio h1 {
+        font-size: 2rem;
+    }
+
+    .destaque-inicio {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .social-link {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
