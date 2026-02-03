@@ -617,6 +617,25 @@ body {
     width: 200px;
     height: 200px;
 }
+.portfolio-links-container {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.portfolio-links-container .portfolio-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+}
+
+/* Ajuste opcional para ficar mais bonito em hover */
+.portfolio-links-container .portfolio-link:hover {
+    transform: translateY(-2px);
+}
 /* Contato */
 .contato {
     padding: 80px 5%;
