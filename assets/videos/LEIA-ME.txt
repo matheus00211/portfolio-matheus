@@ -1,0 +1,16 @@
+Coloque os vídeos nesta pasta com EXATAMENTE estes nomes (formato MP4, H.264):
+
+  hero-antes-depois.mp4        -> vídeo do topo (9:16, sem som, em loop). Ideal: até 3 MB, 6 a 15 s.
+  reels-rinoplastia-1.mp4
+  reels-rinoplastia-2.mp4
+  reels-contabilidade-1.mp4
+  reels-contabilidade-2.mp4
+  resposta-direta-1.mp4
+  antes-depois-original.mp4    -> case de antes e depois: anúncio original
+  antes-depois-variacao.mp4    -> case de antes e depois: sua variação
+
+Capas (posters): hoje são imagens provisórias em posters/*.svg.
+Para trocar por um frame real do vídeo, salve a imagem como posters/NOME.webp
+e troque a extensão no atributo poster="" do index.html.
+
+Dica de tamanho: exporte em 720x1280, bitrate de 2 a 3 Mbps. Cada Reels fica com poucos MB.
