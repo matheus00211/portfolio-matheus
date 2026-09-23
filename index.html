@@ -3,314 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Matheus</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/seu-codigo-aqui.js" crossorigin="anonymous"></script>
+    <title>Matheus Nóbrega | Vídeos para anúncios e sites para negócios</title>
+    <meta name="description" content="Edição de vídeo para anúncios e criação de sites e landing pages para negócios que querem vender mais pelo Instagram, Facebook e Google.">
+    <meta name="theme-color" content="#0B0D10">
+    <link rel="canonical" href="https://portfolio-matheus-nu.vercel.app/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Matheus Nóbrega">
+    <meta property="og:title" content="Matheus Nóbrega | Vídeos para anúncios e sites">
+    <meta property="og:description" content="Criativos em vídeo para quem anuncia e sites que transformam visita em contato.">
+    <meta property="og:url" content="https://portfolio-matheus-nu.vercel.app/">
+    <meta property="og:image" content="https://portfolio-matheus-nu.vercel.app/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Botão WhatsApp -->
-    <a href="https://wa.me/5561982750728" class="whatsapp-float" target="_blank">
-        <div class="whatsapp-box">
-            <i class="fab fa-whatsapp"></i>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <!-- SVG sprite de ícones -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8Z"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 5.5h18v13H3z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m3.5 6 8.5 7 8.5-7"/></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    </svg>
+
+    <header class="header" id="topo">
+        <div class="wrap header-inner">
+            <a href="./index.html" class="brand" aria-label="Matheus Nóbrega, página inicial">
+                <span class="brand-mark" aria-hidden="true">MN</span>
+                <span class="brand-name">Matheus Nóbrega <span class="brand-tag">Vídeo e sites</span></span>
+            </a>
+
+            <nav class="nav" id="menu" aria-label="Menu principal">
+                <a href="./criativos/index.html">Criativos para anúncios</a>
+                <a href="./sites/index.html">Sites</a>
+                <a href="./portfolio/index.html">Portfólio</a>
+            </nav>
+
+            <a class="btn btn-primary btn-sm header-cta" data-wa="geral" href="https://wa.me/5561982750728" target="_blank" rel="noopener">
+                <span class="only-desktop">Falar no WhatsApp</span>
+                <span class="only-mobile">WhatsApp</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-controls="menu" aria-expanded="false">
+                <span class="visually-hidden">Abrir menu</span>
+                <span class="menu-toggle-bar" aria-hidden="true"></span>
+            </button>
         </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="hero hero-hub">
+            <div class="wrap">
+                <p class="eyebrow">Matheus Nóbrega · Brasília/DF</p>
+                <h1>Vídeos que vendem nos anúncios. <span class="accent">Sites que transformam visita em contato.</span></h1>
+                <p class="lead">Escolha o que o seu negócio precisa agora.</p>
+
+                <div class="paths">
+                    <a class="path" href="./criativos/index.html">
+                        <span class="path-kicker">Para quem já anuncia</span>
+                        <h2>Criativos para anúncios</h2>
+                        <p>Variações mensais dos anúncios que mais vendem: novos ganchos, cortes, legendas e formatos 9:16, 4:5 e 1:1.</p>
+                        <span class="path-cta">Ver como funciona <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+                    </a>
+                    <a class="path" href="./sites/index.html">
+                        <span class="path-kicker">Para quem precisa de presença online</span>
+                        <h2>Sites e landing pages</h2>
+                        <p>Páginas rápidas, bonitas no celular e feitas para levar o visitante até o seu WhatsApp.</p>
+                        <span class="path-cta">Ver sites <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+                    </a>
+                </div>
+
+                <p class="hub-portfolio">
+                    Veio pelo 99Freelas ou quer ver tudo o que eu já fiz?
+                    <a class="link-arrow" href="./portfolio/index.html">Portfólio completo e currículo <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </p>
+            </div>
+        </section>
+
+        <section class="section section-tight" aria-labelledby="sobre-titulo">
+            <div class="wrap">
+                <div class="about reveal">
+                    <img class="about-photo" src="./assets/img/matheus.webp" alt="Foto de Matheus Nóbrega" width="160" height="160" loading="lazy" decoding="async">
+                    <div>
+                        <h2 id="sobre-titulo">Edição, sites e tráfego no mesmo lugar</h2>
+                        <p>Sou Matheus Nóbrega, editor de vídeo e desenvolvedor front-end em Brasília/DF. Também trabalho com tráfego pago, então faço vídeos e páginas pensando no que gera contato e venda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <div>
+                <p class="footer-brand">Matheus Nóbrega <span class="brand-tag">Criativos</span></p>
+                <p class="footer-small">Variações de criativos para anúncios · Brasília/DF</p>
+            </div>
+            <ul class="footer-contacts">
+                <li><a data-wa="contato" href="https://wa.me/5561982750728" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> (61) 98275-0728</a></li>
+                <li><a href="https://www.instagram.com/eumatheus_nobrega/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg> @eumatheus_nobrega</a></li>
+                <li><span class="footer-mail"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> <mark class="todo">[PREENCHER E-MAIL]</mark></span></li>
+            </ul>
+        </div>
+        <div class="wrap">
+            <p class="footer-small copyright">© <span id="ano"></span> Matheus Nóbrega. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a class="wa-float" data-wa="geral" href="https://wa.me/5561982750728" target="_blank" rel="noopener" aria-label="Falar com Matheus pelo WhatsApp">
+        <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
     </a>
 
-    <!-- Container Geral -->
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="logo">
-                <i class="bi bi-code-slash"></i>
-                <span>Matheus N.dev</span>
-            </div>
-            <div class="menu">
-                <label class="hamburger">
-                    <input type="checkbox" id="menuToggle">
-                    <svg viewBox="0 0 32 32">
-                        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-                        <path class="line" d="M7 16 27 16"></path>
-                    </svg>
-                </label>
-            </div>
-            <nav class="nav-menu">
-                <a href="#inicio">INÍCIO</a>
-                <a href="#sobre">SOBRE</a>
-                <a href="#skills">HABILIDADES</a>
-                <a href="#portfolio">PROJETOS</a>
-                <a href="#contato">CONTATO</a>
-            </nav>
-        </header>
-
-       <!-- ... (outras seções mantidas como antes) ... -->
-
-<!-- Início -->
-<main id="inicio" class="inicio">
-    <div class="stars-layer1"></div>
-    <div class="stars-layer2"></div>
-    <div class="stars-layer3"></div>
-    <div class="container-inicio">
-        <div class="conteudo-inicio" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="titulo-inicio">
-                <h1>Olá, eu sou <span class="highlight">Matheus Nóbrega</span></h1>
-                <h1 class="destaque-inicio"><span id="typed-title"></span></h1>
-            </div>
-            <a href="https://wa.me/5561982750728" target="_blank" class="cta whatsapp-red" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <span>Fale Comigo</span>
-                <i class="bi bi-whatsapp"></i>
-            </a>
-            <a href="https://drive.google.com/drive/u/2/folders/11W9VL-t9HDYIQK_aFt0C5hPJogWKUSaG" target="_blank" class="cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <span class="btn-text">Baixar CV</span>
-                <span class="btn-icon"><i class="fas fa-download"></i></span>
-            </a>
-            <div class="social-media" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-                <a href="#" target="_blank" class="social-link" data-social="linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/matheus00211" target="_blank" class="social-link" data-social="github"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/eumatheus_nobrega/" target="_blank" class="social-link" data-social="instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-</main>
-<!-- ... (outras seções mantidas como antes) ... -->
-
-        <!-- Sobre -->
-        <section id="sobre" class="sobre">
-            <div class="container-sobre">
-                <div class="headline-sobre" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 class="section-title">SOBRE MIM</h2>
-                    <div class="red-line"></div>
-                </div>
-                <div class="conteudo-sobre">
-                    <div class="left-sobre" data-aos="fade-right" data-aos-duration="1000">
-                        <div class="textos-sobre">
-                            <h3>Dev em Programação e Editor de Vídeos profissional, Web Desing e Social Media</h3>
-                            <p>Tenho 18 anos e sou Programador e Editor de Vídeos Profissional, Web Desing e Social Media.
-                                Especialista em criação de sites modernos, responsivos e funcionais, além de dominar a edição de vídeos para cursos online, videos curtos como reels, tik tok e etc, com foco em qualidade, clareza e engajamento,
-                                especialista tambem em artes criadas pelo Canva e o Figma, junto a ideas para postagens no instagram.
-                                
-                                Apesar da pouca idade, carrego comigo algo que muitos ainda buscam: foco, dedicação e vontade de fazer acontecer.
-                                Cada projeto é uma chance de entregar o meu melhor, com técnica, criatividade e compromisso.
-                                
-                                Se você busca alguém que realmente se comprometa, tenha foco e entregue resultados, pode contar comigo.</p>
-                        </div>
-                    </div>
-                    <div class="right-sobre" data-aos="fade-left" data-aos-duration="1000">
-                        <div class="imagem-sobre">
-                            <img src="./img/WhatsApp Image 2026-02-02 at 15.41.12.jpeg" alt="Coding">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="skills">
-            <div class="container-skills">
-                <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">HABILIDADES</h2>
-                <div class="red-line"></div>
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                        <i class="bi bi-code-slash"></i>
-                        <h3>HTML5</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bi bi-braces"></i>
-                        <h3>CSS3</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-filetype-js"></i>
-                        <h3>JavaScript</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fa fa-video-camera"></i>
-                        <h3>Edição de Vídeos</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio">
-            <div class="container-portfolio">
-                <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">PROJETOS</h2>
-                <div class="red-line"></div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                        <img src="./img/vovo.jpeg" alt="Proteínas da Vovó">
-                        <div class="portfolio-overlay">
-                            <h3>Proteínas da Vovó</h3>
-                            <p>HTML, CSS, JavaScript</p>
-                            <a href="#" class="portfolio-link">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                        <img src="./img/LOGO.png" alt="Resulta Contabil">
-                        <div class="portfolio-overlay">
-                            <h3>Resulta Contabil</h3>
-                            <p>HTML, CSS, JavaScript</p>
-                            <a href="https://resulta-contabil.netlify.app" class="portfolio-link">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
-                        <img src="./img/jolet.jpeg" alt="Livraria Jólet">
-                        <div class="portfolio-overlay">
-                            <h3>Livraria Jólet</h3>
-                            <p>HTML, CSS, JavaScript</p>
-                            <a href="https://livraria-jolet.vercel.app" class="portfolio-link">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
-                        <img src="./img/Leandro.jpeg" alt="Projeto 4">
-                        <div class="portfolio-overlay">
-                            <h3>Portfolio Leandro</h3>
-                            <p>HTML, CSS, JavaScript</p>
-                            <a href="https://matheus00211.github.io/Portifolio-Leandro/" class="portfolio-link">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-item" data-aos="fade-up" data-aos-delay="500">
-    <img src="./img/patient-undergoing-microneedling-procedure.jpg" alt="Reels de Edição de Vídeo">
-    <div class="portfolio-overlay">
-        <h3>Edição de Vídeos - Reels</h3>
-        <p>Rinoplastia videos exemplos</p>
-        
-        <!-- Mostrando os dois links de forma clara -->
-        <div class="portfolio-links-container" style="margin: 15px 0; display: flex; flex-direction: column; gap: 10px;">
-            <a href="https://www.instagram.com/p/DMLPp0WuvSK/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="portfolio-link">
-               Ver Reel 1
-            </a>
-            
-            <a href="https://www.instagram.com/p/DLmyrUrvZcI/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="portfolio-link">
-               Ver Reel 2
-            </a>
-        </div>
-    </div>
-</div>
-<div class="portfolio-item" data-aos="fade-up" data-aos-delay="500">
-    <img src="./img/20260611_182022.jpg" alt="Reels de Edição de Vídeo">
-    <div class="portfolio-overlay">
-        <h3>Edição de Vídeos - Reels</h3>
-        <p>Kênia Nóbrega Contadora</p>
-        
-        <!-- Mostrando os dois links de forma clara -->
-        <div class="portfolio-links-container" style="margin: 15px 0; display: flex; flex-direction: column; gap: 10px;">
-            <a href="https://www.instagram.com/p/DZYKZ-Mvhn5/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="portfolio-link">
-               Ver Reel 1
-            </a>
-            
-            <a href="https://www.instagram.com/p/DZapjYSo-L-/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="portfolio-link">
-               Ver Reel 2
-            </a>
-        </div>
-    </div>
-</div>
-<div class="portfolio-item" data-aos="fade-up" data-aos-delay="500">
-    <img src="./img/Creative Business Ideas_ 2026 Guide for Makers.jpg" alt="Reels de Edição de Vídeo">
-    <div class="portfolio-overlay">
-        <h3>Edição Direct Response</h3>
-        <p>Edição DR desmontração</p>
-        
-        <!-- Mostrando os dois links de forma clara -->
-        <div class="portfolio-links-container" style="margin: 15px 0; display: flex; flex-direction: column; gap: 10px;">
-            <a href="https://drive.google.com/drive/folders/1hGsrQCLv-6mUF6eFUzO3qo-PGEhQdX4D" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="portfolio-link">
-               Ver Video
-            </a>          
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contato -->
-        <section id="contato" class="contato">
-            <div class="contacts">
-                <div class="container">
-                    <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">CONTATO</h2>
-                    <div class="red-line"></div>
-                    <div class="icons" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                        <div class="icon">
-                            <a href="https://api.whatsapp.com/send?phone=5561982750728" target="_blank">
-                                <div class="box">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                            </a>
-                            <a href="https://api.whatsapp.com/send?phone=5561982750728" target="_blank">
-                                <p>WhatsApp</p>
-                            </a>
-                            <a href="https://api.whatsapp.com/send?phone=5561982750728" target="_blank">
-                                <p>(+55) 61-98275-0728</p>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#" target="_blank">
-                                <div class="box">
-                                    <i class="fab fa-linkedin"></i>
-                                </div>
-                            </a>
-                            <a href="#" target="_blank">
-                                <p>LinkedIn</p>
-                            </a>
-                            <a href="#" target="_blank">
-                                <p>@matheus</p>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://github.com/matheus00211" target="_blank">
-                                <div class="box">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                            </a>
-                            <a href="https://github.com/matheus00211" target="_blank">
-                                <p>GitHub</p>
-                            </a>
-                            <a href="https://github.com/matheus00211" target="_blank">
-                                <p>@matheus00211</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2025 Matheus N.dev - Feito com paixão</p>
-            <div class="social-media">
-                <a href="https://wa.me/5561982750728" target="_blank" class="social-link" data-social="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" target="_blank" class="social-link" data-social="linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/matheus00211" target="_blank" class="social-link" data-social="github"><i class="fab fa-github"></i></a>
-            </div>
-        </footer>
-    </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/main.js" defer></script>
 </body>
 </html>
